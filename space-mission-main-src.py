@@ -275,3 +275,16 @@ plt.xlabel("Month (in Numeric)")
 plt.ylabel("Count")
 plt.savefig("rocket_launch_distribution_year",dpi=600)
 plt.show()
+
+
+
+# Plotting the top 20 companies with the most successful missions.
+# Using a colorful bar chart, adding labels and title, and saving a high-res image.
+company_success_rate = df.groupby('Company')['SuccessFlag'].count()
+company_success_rate.sort_values(ascending=False).head(20).plot(kind='bar',colormap='summer')
+plt.title('Mission Success Count by Company')
+plt.xlabel('Company Name')
+plt.ylabel('Number of Successful Missions')
+sns.despine()
+plt.savefig("company_success_rate.jpeg",dpi=600)
+plt.show()
