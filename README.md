@@ -83,7 +83,7 @@ These visuals make it easy to **understand patterns and trends** in space missio
 ## Tools & Libraries
 ` EDA & Data Cleaning`
 
-`Python 3.x`
+`Python`
 
 `pandas`
 
